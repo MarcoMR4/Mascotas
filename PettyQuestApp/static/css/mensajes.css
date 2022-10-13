@@ -1,0 +1,179 @@
+/* Lista contactos */
+
+.contactos {
+    position: relative;
+    width: 15%;    
+    overflow: auto;
+    border-radius: 0;
+}
+
+.btnContactos button{
+    position: relative;
+    background-color: #D9D9D9;
+    color: black;    
+    border: none;
+    width: 100%;          
+    border-radius: 10px;        
+}
+
+.btnContactos{
+    position: relative;
+    background-color: #6D6D6D;
+    height: 100%;
+}
+
+.btnContacto:hover{
+    background-color: #000;
+    color: white;
+}
+
+.contacto{
+    position: relative;    
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#mensajeSinLeer{
+    margin: 0;
+    color: red;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#sinMensajes{
+    margin: 0;
+    color: red;
+    font-weight: bold;
+    font-size: 5px;
+}
+
+.imagenPerfil i{
+    font-size: 60px;    
+    color: white;
+    width: auto;
+}
+
+.nombrePerfil{
+    display: block;
+    width: 70%;    
+}
+
+.nombrePerfil p{
+    font-size: 2vh;    
+    color: black;
+}
+
+.nombrePerfil:hover p{
+    color: white;
+}
+
+/* Conversacion */
+
+.conversacionContacto{
+    position: relative;
+    width: 70%;
+    border-radius: 0;
+}
+
+.nombreContacto{
+    position: relative;
+    background-color: #000000;    
+    font-weight: bold;
+}
+
+.imagenPerfilConversacion i{
+    font-size: 48px;
+}
+
+.nombrePerfilConversacion {
+    color: white;
+    font-size: 3vh;
+}
+
+.mensajesContacto{
+    position: relative;
+    overflow: auto;
+    height: 500px;
+}
+
+/* Informacion de contacto */
+
+.cardInfoContacto{
+    position: relative;
+    width: 15%;
+    border-radius: 0;
+}
+
+.campo{
+    font-weight: bold;
+    font-size: 2vh;
+}
+
+/* form enviar mensaje */
+
+.formMensaje{
+    height: 50px;
+}
+
+.enviarMensajeContacto{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#mensajeContacto{
+    resize: none;
+    width: 90%;
+}
+
+#btnEnviarMensajeContacto {
+    display: flex;
+    justify-content: center;
+    width: 7%;
+    height: 50%;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background: white;
+}
+
+#btnEnviarMensajeContacto i {
+    font-size: 200%;
+}
+
+/* Formato mensajes */
+
+#remitente {
+    position: relative;
+    background-color: #0eb9ff;
+    border: 5px solid #0eb9ff;
+    color: white;
+    border-radius: 15px;
+    width: 50%;
+    font-size: large;
+    margin-left: auto;
+}
+
+#destinatario {
+    position: relative;
+    background-color: #358f80;
+    border: 5px solid #358f80;
+    color: white;
+    border-radius: 15px;
+    width: 50%;
+    font-size: large;
+    margin-right: auto;
+}
+
+@media only screen and (max-width: 919px) {
+   .contactos{
+    width: 25%;
+   }
+
+   .conversacionContacto{
+    width: 75%;
+   }
+}

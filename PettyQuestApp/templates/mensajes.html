@@ -1,0 +1,102 @@
+{% extends 'layouts/base.html'%}
+
+{%load static%}
+{% block stylesheets %}
+<link rel="stylesheet" href="/static/css/mensajes.css">
+<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+{% endblock stylesheets %}
+{%block content%}
+<div class="container-fluid d-flex">
+
+    <!-- Lista contactos -->
+    <div class="contactos card mt-4">
+        <div class="buscador d-flex mt-4">
+            <i class='bx bx-search' style="font-size: 4vh;"></i>
+            {{formBuscar.buscador}}
+        </div>
+        <div class="btnContactos">    
+            <button class="btnContacto mt-2" value="2">
+                <div class="contacto">
+                    <div class="nombrePerfil">
+                        <p class="m-2">Contacto</p>
+                    </div>
+                </div>
+            </button>
+        </div>
+    </div>
+
+    <!-- Conversacion -->
+    <div class="conversacionContacto card mt-4">
+        <div class="nombreContacto card-header">
+            <div class="nombrePerfilConversacion text-center">
+                <p class="m-0">Contacto</p>
+            </div>
+        </div>
+        <div class="mensajesContacto card-body">
+        </div>
+        <div class="formMensaje card-footer">
+            <form method="POST" action="#" class="enviarMensajeContacto">
+                {% csrf_token %}
+                {{formEnviar.enviar}}
+                <!-- <textarea name="mensajeContacto" id="mensajeContacto" placeholder="Escribe aqui tu mensaje" rows="1"
+                    required></textarea> -->
+                <button type="submit" id="btnEnviarMensajeContacto"><i class='bx bx-send'></i></button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Informacion de contacto -->
+    <div class="card cardInfoContacto mt-4">
+        <div class="card-header d-flex justify-content-around" style="background-color: #6D6D6D; font-weight: bold; color: white; font-size: 3vh;">
+            <p class="m-0">Información</p>            
+        </div>
+        <div class="card-body d-flex flex-column justify-content-between">
+            <div class="espacioNombreCompletoContacto d-flex flex-column">
+                <div class="campo">
+                    <p class="m-0">Nombre:</p>
+                </div>
+                <div class="campo2">
+                    <p class="nombreCompletoContacto m-0">Nombre</p>
+                </div>
+            </div>
+            <hr id="hrEdadContacto">
+            <div class="espacioEdadContacto d-flex flex-column">
+                <div class="campo">
+                    <p class="m-0">Edad:</p>
+                </div>
+                <div class="campo2 ">
+                    <p class="edadContacto m-0">Edad</p>
+                </div>
+            </div>
+            <hr>
+            <div class="espacioDireccionContacto d-flex flex-column">
+                <div class="campo ">
+                    <p class="m-0">Dirección:</p>
+                </div>
+                <div class="campo2 ">
+                    <p class="direccionContacto m-0">Dirección</p>
+                </div>
+            </div>
+            <hr id="hrEdadContacto">
+            <div class="espacioTelefonoContacto d-flex flex-column">
+                <div class="campo ">
+                    <p class="m-0">Télefono:</p>
+                </div>
+                <div class="campo2 ">
+                    <p class="telefonoContacto m-0">Télefono</p>
+                </div>
+            </div>
+            <hr>
+            <div class="espacioGoogleMaps d-flex flex-column">
+                <div class="campo ">
+                    <p class="m-0">Google Maps:</p>
+                </div>
+                <div class="campo2 ">
+                    <p class="googleMapsContacto m-0">Dirección</p>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </div>
+</div>
+{% endblock %}

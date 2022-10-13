@@ -1,0 +1,237 @@
+{% extends 'layouts/base.html'%}
+
+{%load static%}
+
+{%block content%}
+
+<div style="background-color: #696969">
+    <div class="container" style="background-color: #696969;">
+        <div class="row" style="background-color: #FFFFFF;">
+            <div class="col">
+                <h1 style="text-align: center;">¡Busca y encuentra a tu amigo ideal!</h1>
+            </div>
+        </div>
+        <div class="row" style="background-color: #FFFFFF;">
+            <div class="col">
+                <h3 style="text-align: center;">Tu interés en buscar animales en adopción impulsa nuestro deseo de seguir
+                    apoyándolos</h3>
+            </div>
+        </div>
+        <div class="row mt-3 mb-3">
+            <div class="col">
+                <h3 style="text-align: center; color: white;">¡¡Conoce a nuestros amigos!!</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2" style="background-color: #A7A3A3;">
+                <div class="row">
+                    <h3>Filtros</h3>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col" style="text-align: center;">
+                        <h5>Tamaño</h5>
+                    </div>
+                    <div class="form-check" style="text-align: center;">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Grande
+                        </label>
+                    </div>
+                    <div class="form-check" style="text-align: center;">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            Mediano
+                        </label>
+                    </div>
+                    <div class="form-check" style="text-align: center;">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                        <label class="form-check-label" for="flexRadioDefault3">
+                            Chico
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col" style="text-align: center;">
+                        <h5>Edad</h5>
+                    </div>
+                    <div class="form-check" style="text-align: center;">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Cachorro
+                        </label>
+                    </div>
+                    <div class="form-check" style="text-align: center;">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            Adulto
+                        </label>
+                    </div>
+                    <div class="form-check" style="text-align: center;">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                        <label class="form-check-label" for="flexRadioDefault3">
+                            Anciano
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col" style="text-align: center;">
+                        <h5>Raza</h5>
+                    </div>
+                    <div class="form-check" style="text-align: center;">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Perro
+                        </label>
+                    </div>
+                    <div class="form-check" style="text-align: center;">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            Gato
+                        </label>
+                    </div>
+                    <div class="form-check" style="text-align: center;">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                        <label class="form-check-label" for="flexRadioDefault3">
+                            Otro
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col" style="text-align: center;">
+                        <h5>Estado</h5>
+                    </div>
+                    <div class="form-check" style="text-align: center;">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            En adopción
+                        </label>
+                    </div>
+                    <div class="form-check" style="text-align: center;">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            En proceso
+                        </label>
+                    </div>
+                    <div class="form-check" style="text-align: center;">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                        <label class="form-check-label" for="flexRadioDefault3">
+                            Adoptado
+                        </label>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-1"></div>
+    
+            <div class="col-md-9" style="background-color: #A7A3A3;">
+                <div class="row mt-3">
+                    <div class="col-1"></div>
+                    <div class="col-5">
+                        <div class="card" style="width: 18rem; background-color: #D9D9D9;">
+                            <img src="..." class="card-img-top" alt="..." style="width: 18rem; height: 10rem;">
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item" style="background-color: #D9D9D9;">
+                                        <div class="row">
+                                            <div class="col-5">
+                                                <p style="font-size: small;">Nombre:</p>
+                                            </div>
+                                            <div class="col-7">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item" style="background-color: #D9D9D9;">
+                                        <div class="row">
+                                            <div class="col-5">
+                                                <p style="font-size: small;">Genero:</p>
+                                            </div>
+                                            <div class="col-7">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item" style="background-color: #D9D9D9;">
+                                        <div class="row">
+                                            <div class="col-5">
+                                                <p style="font-size: small;">Personalidad:</p>
+                                            </div>
+                                            <div class="col-7">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item" style="background-color: #D9D9D9;">
+                                        <div class="row">
+                                            <div class="col-5">
+                                                <p style="font-size: small;">Estado:</p>
+                                            </div>
+                                            <div class="col-7">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>                 
+                    </div>
+    
+                    <div class="col-1"></div>
+    
+                    <div class="col-5">
+                        <div class="card" style="width: 18rem; background-color: #D9D9D9;">
+                            <img src="..." class="card-img-top" alt="..." style="width: 18rem; height: 10rem;">
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item" style="background-color: #D9D9D9;">
+                                        <div class="row">
+                                            <div class="col-5">
+                                                <p style="font-size: small;">Nombre:</p>
+                                            </div>
+                                            <div class="col-7">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item" style="background-color: #D9D9D9;">
+                                        <div class="row">
+                                            <div class="col-5">
+                                                <p style="font-size: small;">Genero:</p>
+                                            </div>
+                                            <div class="col-7">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item" style="background-color: #D9D9D9;">
+                                        <div class="row">
+                                            <div class="col-5">
+                                                <p style="font-size: small;">Personalidad:</p>
+                                            </div>
+                                            <div class="col-7">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item" style="background-color: #D9D9D9;">
+                                        <div class="row">
+                                            <div class="col-5">
+                                                <p style="font-size: small;">Estado:</p>
+                                            </div>
+                                            <div class="col-7">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>                 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
