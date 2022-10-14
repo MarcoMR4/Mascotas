@@ -97,3 +97,9 @@ def mensajes(request):
             'formBuscar' : buscadorContactoMensajeria,
             'formEnviar': enviarMensaje
     }) 
+
+def consultarSolicitudes(request):
+    title = 'Consultar_Solicitudes'
+    return render(request , 'consultarSolicitudes/consultarSolicitudes.html',{
+            'title' : title,
+    }) 
