@@ -4,12 +4,13 @@
 {% block stylesheets %}
 <link rel="stylesheet" href="/static/css/consultarSolicitudes.css">
 {% endblock stylesheets %}
+
 {%block content%}
 <div class="container-fluid d-flex flex-column">
     <div class="botonesEleccion">
         <div class="eleccion d-flex justify-content-center align-items-center rounded-pill">
             <div class="botonRecientes rounded-pill d-flex align-items-center" >
-                <button class="btn p-1" style="font-weight: 400;" type="button">Recientes</button>
+                <button class="btn p-1 btnRecientes" style="font-weight: 400;" type="button">Recientes</button>
                 <div id="notificacionRecientes" class="notificacion rounded-circle" style="width: 30px;">
                     <p class="m-1 text-center">1</p>
                 </div>
@@ -18,7 +19,7 @@
                 <div id="notificacionEnProceso" class="notificacion rounded-circle" style="width: 30px;">
                     <p class="m-1 text-center">1</p>
                 </div>
-                <button class="btn p-1" style="font-weight: 400;" type="button">En espera</button>
+                <button class="btn p-1 btnEnEspera" style="font-weight: 400;" type="button">En espera</button>
             </div>
         </div>
     </div>
@@ -79,15 +80,15 @@
                             <div class="campo col-sm-5">
                                 <p>Documentos:</p>
                             </div>
-                            <div class="fotosDocumentos col-sm-7">
-                                <img src="#" alt="ine" height="250" width="230">
-                                <img src="#" alt="domicilio" height="250" width="230">
+                            <div class="fotosDocumentos col-sm-7 row">
+                                <a class="col-sm-5" href="/static/images/Chololoy2.jpeg" alt="ine" >INE</a>
+                                <a class="col-sm-5" href="/static/images/Chololoy2.jpeg" alt="domicilio">Comprobante de domicilio</a>
                             </div>
                         </div>
                     </div>
                     <div class="datosMascota card col-sm-4 p-0">
-                        <img src="#" class="card-img-top" alt="...">
-                        <div class="card-body bg-light">
+                        <img src="/static/images/Chololoy2.jpeg" class="card-img-top">
+                        <div class="card-body bg-light  d-flex flex-column justify-content-around">
                             <div class="infoMascota">
                                 <div class="espacioNombreMascota row">
                                     <div class="campo col-sm-6">
@@ -124,6 +125,15 @@
                                         <p>Perro</p>
                                     </div>
                                 </div>
+                                <hr>
+                                <div class="espacioUbicacionMascota row">
+                                    <div class="campo col-sm-6">
+                                        <p>Ubicación:</p>
+                                    </div>
+                                    <div class="ubicacionMascota col-sm-6">
+                                        <p>Tec #25</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="card-footer bg-secondary botones d-flex justify-content-center align-items-center">
@@ -137,13 +147,13 @@
         <div class="procesoSolicitudes mx-auto">
             <div class="solicitud mx-auto shadow-lg p-1 mb-3" id="1">
                 <div class="nombreSolicitanteProceso text-center">
-                    <h2 class="m-0">Pablo</h2>
+                    <h2>Pablo</h2>
                 </div>
-                <div class="contenidoSolicitud d-flex justify-content-between bg-light">
-                    <div class="datosSolicitante" style="width: 80%;">
-                        <div class="nombre row mt-3">
+                <div class="contenidoSolicitud row justify-content-center w-100 mx-0 bg-light">
+                    <div class="datosSolicitante col-sm-8">
+                        <div class="nombre row ">
                             <div class="campo col-sm-5">
-                                <p>Nombre:</p>
+                                <p>Nombre completo:</p>
                             </div>
                             <div class="nombreCompleto col-sm-7">
                                 <p>Juan Pablo Juarez Castillo</p>
@@ -152,19 +162,28 @@
                         <hr>
                         <div class="edad row mt-3">
                             <div class="campo col-sm-5">
-                                <p>Edad:</p>
+                                <p>Fecha de nacimiento:</p>
                             </div>
                             <div class="edad-Solicitante col-sm-7">
                                 <p>20</p>
                             </div>
                         </div>
                         <hr>
-                        <div class="domicilio row mt-3">
+                        <div class="direccion row mt-3">
                             <div class="campo col-sm-5">
-                                <p>Domicilio:</p>
+                                <p>Dirección:</p>
                             </div>
                             <div class="domicilioCompleto col-sm-7">
                                 <p>Manantial de Paracuaro #195, Col. Ampliacion Manantiales</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="telefono row mt-3">
+                            <div class="campo col-sm-5">
+                                <p>Télefono:</p>
+                            </div>
+                            <div class="telefonoCompleto col-sm-7">
+                                <p>4434110582</p>
                             </div>
                         </div>
                         <hr>
@@ -185,15 +204,15 @@
                             <div class="campo col-sm-5">
                                 <p>Documentos:</p>
                             </div>
-                            <div class="fotosDocumentos col-sm-7">
-                                <img src="img/Mascotas/p1.jpg" alt="ine" height="250" width="230">
-                                <img src="img/Mascotas/p2.jpg" alt="domicilio" height="250" width="230">
+                            <div class="fotosDocumentos col-sm-7 row">
+                                <a class="col-sm-5" href="/static/images/Chololoy2.jpeg" alt="ine" >INE</a>
+                                <a class="col-sm-5" href="/static/images/Chololoy2.jpeg" alt="domicilio">Comprobante de domicilio</a>
                             </div>
                         </div>
                     </div>
-                    <div class="datosMascotaProceso card" style="width: 20%;">
-                        <img src="img/uploaded/mascotas/p2.jpg" class="card-img-top" alt="...">
-                        <div class="card-body bg-light">
+                    <div class="datosMascotaProceso card col-sm-4 p-0">
+                        <img src="/static/images/Chololoy2.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body bg-light d-flex flex-column justify-content-around">
                             <div class="infoMascota">
                                 <div class="espacioNombreMascota row">
                                     <div class="campo col-sm-6">
@@ -203,6 +222,7 @@
                                         <p>Randy</p>
                                     </div>
                                 </div>
+                                <hr>
                                 <div class="espacioEdadMascota row">
                                     <div class="campo col-sm-6">
                                         <p>Edad:</p>
@@ -211,6 +231,7 @@
                                         <p>Adulto</p>
                                     </div>
                                 </div>
+                                <hr>
                                 <div class="espacioGeneroMascota row">
                                     <div class="campo col-sm-6">
                                         <p>Genero:</p>
@@ -219,6 +240,7 @@
                                         <p>Macho</p>
                                     </div>
                                 </div>
+                                <hr>
                                 <div class="espacioRazaMascota row">
                                     <div class="campo col-sm-6">
                                         <p>Raza:</p>
@@ -227,11 +249,20 @@
                                         <p>Mestizo</p>
                                     </div>
                                 </div>
+                                <hr>
+                                <div class="espacioUbicacionMascota row">
+                                    <div class="campo col-sm-6">
+                                        <p>Ubicación:</p>
+                                    </div>
+                                    <div class="ubicacionMascota col-sm-6">
+                                        <p>Tec #25</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="card-footer bg-secondary botones">
-                            <button class="btn btn-danger rechazar">Rechazar</button>
-                            <button class="btn btn-success aceptar">Aceptar</button>
+                        <div class="card-footer bg-secondary botones d-flex justify-content-center align-items-center">
+                            <button type="button" class="btn btn-danger rechazar p-0 mr-2" value="2" style="font-size: 2vh;">Rechazar</button>
+                            <button type="button" class="btn btn-primary aceptar p-0" value="1" style="font-size: 2vh;">Aceptar</button>
                         </div>
                     </div>
                 </div>
@@ -240,3 +271,7 @@
     </div>
 </div>
 {% endblock %}
+
+{% block codeJS %}
+<script src="/static/js/consultarSolicitudes.js"></script>
+{% endblock codeJS %}
