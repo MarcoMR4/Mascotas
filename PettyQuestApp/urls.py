@@ -12,5 +12,7 @@ urlpatterns = [
     path('registroMascota/', views.registromascota, name="registroMascota"),
     path('mensajes/', views.mensajes, name="mensajes"),
     path('consultarSolicitudes/', views.consultarSolicitudes, name="consultarSolicitudes"),
+    path('misMascotas/', views.misMascotas, name="misMascotas"),
+    path('perfilUsuario/', views.perfilUsuario, name="perfilUsuario"),
     
 ]
