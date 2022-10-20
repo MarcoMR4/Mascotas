@@ -5,6 +5,7 @@ from django import forms
 from pkg_resources import require
 from django.contrib.auth.models import User 
 from django.contrib.auth.forms import UserCreationForm 
+from. models import *
 
 class RegistroForm(UserCreationForm):
     class Meta:
@@ -45,6 +46,79 @@ class InicioSesion(forms.Form):
     correoElectronico = forms.EmailField(label="Correo electronico", max_length=45)
     contraseña = forms.CharField(label="Contraseña", max_length=45, min_length=8)
 
+class PerfilUsuarioForm(forms.Form):
+    nombre = forms.CharField(
+        widget= forms.TextInput(
+            attrs={
+                'placeholder':'Nombre',
+                'class':'form-control my-2'
+            }
+        )
+    )
+    apa = forms.CharField(
+        widget= forms.TextInput(
+            attrs={
+                'placeholder':'Apellido Paterno',
+                'class':'form-control me-2 my-2'
+            }
+        )
+    )
+    ama = forms.CharField(
+        widget= forms.TextInput(
+            attrs={
+                'placeholder':'Apellido Materno',
+                'class':'form-control ms-2 my-2'
+            }
+        )
+    )
+    domicilio = forms.CharField(
+        widget= forms.TextInput(
+            attrs={
+                'placeholder':'Domicilio',
+                'class':'form-control my-2'
+            }
+        )
+    )
+    numext = forms.CharField(
+        widget= forms.TextInput(
+            attrs={
+                'placeholder':'Número exterior',
+                'class':'form-control me-2 my-2'
+            }
+        )
+    )
+    numint = forms.CharField(
+        widget= forms.TextInput(
+            attrs={
+                'placeholder':'Número interior',
+                'class':'form-control ms-2 my-2'
+            }
+        )
+    )
+    password = forms.CharField(
+        widget= forms.PasswordInput(
+            attrs={
+                'placeholder':'Contraseña',
+                'class':'form-control my-2'
+            }
+        )
+    )
+    cp = forms.CharField(
+        widget= forms.TextInput(
+            attrs={
+                'placeholder':'Codigo Postal',
+                'class':'form-control me-2 my-2'
+            }
+        )
+    )
+    telefono = forms.CharField(
+        widget= forms.TextInput(
+            attrs={
+                'placeholder':'Telefono',
+                'class':'form-control ms-2 my-2'
+            }
+        )
+    )
 
 class buscadorContactoMensajeria(forms.Form):
     buscador = forms.CharField(
