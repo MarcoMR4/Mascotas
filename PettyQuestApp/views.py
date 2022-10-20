@@ -112,3 +112,9 @@ def perfilUsuario(request):
         'title' : title,
         'formperfilUsuario':PerfilUsuarioForm
     }) 
+
+def perfilMascota(request):
+    title = 'perfilMascota'
+    return render(request , 'mascotas/perfilMascota.html',{
+        'title' : title,
+    }) 

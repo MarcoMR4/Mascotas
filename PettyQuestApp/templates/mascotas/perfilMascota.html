@@ -1,0 +1,105 @@
+{% extends 'layouts/base.html'%}
+
+{%load static%}
+
+{%block content%}
+
+
+<div class="container">
+    <div class="row">
+        <h1>Perfil de mascota</h1>
+    </div>
+    
+        <div class="row mt-4">
+            <div class="col-md-5">
+                
+                <div class="row mt-4">
+                    <div class="col-3"></div>
+                    <div class="col-5" style="height: 20rem; width: 15rem; border: 1px solid black;">
+                        <img src="" alt="imagen" class="" style="height: 20rem; width: 15rem;" id="fotomas2">
+                    </div>
+                </div>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-md-5">
+                <div class="mb-3 row">
+                    <label for="vernombre" class="col-sm-3 col-form-label">Nombre:</label>
+                    <div class="col-sm-9">
+                        <input type="text" readonly class="form-control" id="vernombre" required name="vernombre">
+                    </div>
+                </div>
+                <hr>
+                <div class="mb-3 row">
+                    <label for="vergenero" class="col-sm-3 col-form-label">Genero:</label>
+                    <div class="col-sm-9">
+                        <input type="text" readonly class="form-control" id="vergenero" required name="vergenero">
+                    </div>
+                </div>
+                <hr>
+                <div class="mb-3 row">
+                    <label for="idRazaAnimal" class="col-sm-3 col-form-label">Tipo de animal:</label>
+                    <div class="col-sm-9">
+                        <input type="text" readonly class="form-control" id="idRazaAnimal" required name="idRazaAnimal">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="ver_raza" class="col-sm-3 col-form-label">Raza:</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="ver_raza" required name="ver_raza">
+                    </div>
+                </div>
+                <hr>
+                <div class="mb-3 row">
+                    <label for="personalidad" class="col-sm-3 col-form-label">Personalidad:</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="personalidad" name="personalidad">
+                    </div>
+                </div>
+                <hr>
+                <div class="mb-3 row">
+                    <label for="veredad" class="col-sm-3 col-form-label">Edad:</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="veredad" name="veredad">
+                    </div>
+                </div>
+                <hr>
+                <div class="mb-3 row">
+                    <label for="vertamano" class="col-sm-3 col-form-label">Tamaño:</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="vertamano" name="vertamano">
+                    </div>
+                </div>
+                <hr>
+                <div class="mb-3 row">
+                    <label for="ubicacion" class="col-sm-3 col-form-label">Ubicacion:</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="ubicacion" name="ubicacion">
+                    </div>
+                </div>
+                <hr>
+                <div class="mb-3 row">
+                    <label for="historial" class="col-sm-3 col-form-label">Historial clinico:</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="historial" name="historial">
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <div class="row mt-1">
+                    <video width="300" height="240" controls id="video2">
+                        <source src="movie.mp4" type="video/mp4">
+                        <source src="movie.ogg" type="video/ogg">
+                        Your browser does not support the video tag.
+                      </video>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+
+{% endblock %}
