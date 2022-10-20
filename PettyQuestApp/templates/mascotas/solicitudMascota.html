@@ -1,0 +1,61 @@
+{% extends 'layouts/base.html'%}
+
+{%load static%}
+
+{%block content%}
+
+<div class="container-fluid">
+
+        <form id="formSol" autocomplete="off">
+            <div class="row">
+                <div class="col-lg-8 informacion">
+                    <div class="mb-3 row">
+                        <label for="direccion">Dirección:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="direccion" name="direccion" required>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="razon">¿Por qué desea adoptar?:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="razon" name="razon" required>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="personas">¿Cuántas personas viven en su casa?:</label>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control" id="personas" name="personas" min="1" required>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="recursos">¿Con qué recursos cuenta para el cuidado de la mascota?:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="recursos" name="recursos" required>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label>Suba un comprobante de domicilio:</label>
+                        <input type="file" class="form-control" id="comprobanteDomicilio" name="comprobanteDomicilio"
+                            required>
+                    </div>
+                    <div class="mb-3 row">
+                        <label>Suba un copia de su INE:</label>
+                        <input type="file" class="form-control" id="ine" name="ine" required>
+                    </div>
+                    <div class="mb-3 row">
+                        <label>Estoy dispuesto a mantener un seguimiento mensual&nbsp&nbsp&nbsp<input type="checkbox"
+                                id="cbox1" required></label><br>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-8"></div>
+                <div class="btn1 col-md-4">
+                    <input class="btn btn-success" type="submit" value="Aceptar">
+                    <a class="btn btn-danger" href="" role="button">Cancelar</a>
+                </div>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
