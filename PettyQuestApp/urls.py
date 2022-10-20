@@ -11,5 +11,6 @@ urlpatterns = [
     path('logout/', views.signout, name='logout'),
     path('registroMascota/', views.registromascota, name="registroMascota"),
     path('mensajes/', views.mensajes, name="mensajes"),
+    path('consultarSolicitudes/', views.consultarSolicitudes, name="consultarSolicitudes"),
     
 ]
