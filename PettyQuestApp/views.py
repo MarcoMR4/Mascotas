@@ -18,10 +18,6 @@ def index(request):
                 'formUsuario': CrearUsuario,
                 'formInicio' : InicioSesion 
                 })
-        else:   
-                print("Entro al POST")
-                Usuario.objects.create(nombre=request.POST['nombre'], apellidoP=request.POST['apellidoP'], apellidoM=request.POST['apellidoM'],fechaNacimiento=request.POST['fechaNacimiento'],correoElectronico=request.POST['correoElectronico'],contraseña=request.POST['contraseña1'],telefono=request.POST['telefono'],calle=request.POST['calle'],numero=request.POST['numero'],colonia=request.POST['colonia'],ciudad=request.POST['ciudad'],codigoPostal=request.POST['codigoPostal'])
-                return redirect('index')
                 
 
 def catalogo(request):
@@ -96,4 +92,10 @@ def mensajes(request):
             'title' : title,
             'formBuscar' : buscadorContactoMensajeria,
             'formEnviar': enviarMensaje
+    }) 
+
+def consultarSolicitudes(request):
+    title = 'Consultar_Solicitudes'
+    return render(request , 'consultarSolicitudes/consultarSolicitudes.html',{
+            'title' : title,
     }) 
