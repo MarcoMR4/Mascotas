@@ -1,0 +1,21 @@
+{% extends 'layouts/base.html'%} {%block content%}
+
+<div class="container">
+    <h3 class="h3 text-center my-4">Perfil</h3>
+  <form>
+    {{formperfilUsuario.nombre}}
+    <div class="input-group mb-3">
+      {{formperfilUsuario.apa}} {{formperfilUsuario.ama}}
+    </div>
+    {{formperfilUsuario.domicilio}}
+    <div class="input-group mb-3">
+      {{formperfilUsuario.numext}} {{formperfilUsuario.numint}}
+    </div>
+    {{formperfilUsuario.password}}
+    <div class="input-group mb-3">
+      {{formperfilUsuario.cp}} {{formperfilUsuario.telefono}}
+    </div>
+  </form>
+</div>
+
+{% endblock %}

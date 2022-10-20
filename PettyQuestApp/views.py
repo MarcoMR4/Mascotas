@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from .forms import CrearUsuario, InicioSesion, RegistroForm, buscadorContactoMensajeria, enviarMensaje
-from .models import Mascota
+from .forms import *
+from .models import *
 from django.contrib.auth.models import User 
 from django.views.generic import CreateView
 from django.contrib.auth import login, logout, authenticate
@@ -98,4 +98,17 @@ def consultarSolicitudes(request):
     title = 'Consultar_Solicitudes'
     return render(request , 'consultarSolicitudes/consultarSolicitudes.html',{
             'title' : title,
+    })
+
+def misMascotas(request):
+    title = 'misMascotas'
+    return render(request , 'usuario/misMascotas.html',{
+        'title' : title,
+    }) 
+
+def perfilUsuario(request):
+    title = 'perfilUsuario'
+    return render(request , 'usuario/perfilUsuario.html',{
+        'title' : title,
+        'formperfilUsuario':PerfilUsuarioForm
     }) 
