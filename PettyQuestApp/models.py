@@ -134,7 +134,7 @@ class Mensaje(models.Model):
 class contratoAdopcion(models.Model):
     comporbanteDomicilio = models.CharField(max_length=200)
     fecha = models.DateField(default=now)
-    idUsuario = models.ForeignKey('Usiaro', on_delete=models.CASCADE, null = True, blank = True)
+    idUsuario = models.ForeignKey('Usuario', on_delete=models.CASCADE, null = True, blank = True)
     idMascota = models.ForeignKey('Mascota', on_delete=models.CASCADE, null = True, blank = True)
     idAsociacion = models.ForeignKey('AsociacionVeterinaria', on_delete=models.CASCADE, null = True, blank = True)
     ine = models.CharField(max_length=200)

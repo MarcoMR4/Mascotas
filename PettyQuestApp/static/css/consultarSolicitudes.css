@@ -1,0 +1,94 @@
+/* General */
+
+.solicitud{
+    position: relative;    
+    height: auto;             
+    margin-bottom: 5px;
+    border-radius: 10px;
+    /* border: 2px solid white; */
+    background-color: white;
+}
+
+/* Botones de eleccion */
+
+.botonRecientes{
+    background-color: #D9D9D9;
+}
+
+.botonEnProceso{
+    background-color: #9F9F9F;   
+}
+
+.notificacion{
+    background-color: #5F5B5B;
+    width: 100%;
+    z-index: 2;
+}
+
+.notificacion p{
+    color: white;
+}
+
+/* Nuevas solicitudes */
+
+.nuevasSolicitudes{
+    margin-top: 3px;
+    width: 80%;   
+    border-radius: 10px;    
+    background-color: white; 
+}
+
+.nuevasSolicitudes h1{
+    text-align: center;
+    background-color: #144167;
+    color: white;
+}
+
+.nombreSolicitante{
+    position: relative;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #767272;
+    color: white;
+    width: 100%;
+}
+
+.nombreSolicitante h2{
+    margin: 0;
+}
+
+.datosMascota{
+    background-color: #83BAE7;
+    border-end-end-radius: 10px;
+}
+
+/* En proceso solicitudes */
+
+.procesoSolicitudes{
+    margin-top: 3px;
+    width: 80%;   
+    border-radius: 10px;    
+    background-color: white; 
+}
+
+.procesoSolicitudes h1{
+    text-align: center;
+    background-color: #186614;
+    color: white;
+}
+
+.nombreSolicitanteProceso{
+    position: relative;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #767272;
+    color: white;
+    width: 100%;
+}
+
+.datosMascotaProceso{
+    background-color: #BCF1BA;
+    border-end-end-radius: 10px;
+}
