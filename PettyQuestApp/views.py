@@ -118,3 +118,13 @@ def perfilMascota(request):
     return render(request , 'mascotas/perfilMascota.html',{
         'title' : title,
     }) 
+
+def solicitudMascota(request):
+        if request.method == 'GET':
+                 return render(request , 'mascotas/solicitudMascota.html',{
+                'title' : "Solicitud mascota"
+    })
+        else :
+                print("Entro al POST")
+                Mascota.objects.create(direccion=request.POST['direccion'], razon=request.POST['razon'], personas=request.POST['personas'], recursos=request.POST['recursos'], comprobanteDomicilio=request.POST['comprobanteDomicilio'], ine=request.POST['ine'])
+      
