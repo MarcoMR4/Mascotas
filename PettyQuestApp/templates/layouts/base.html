@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,64 +15,91 @@
 </head>
 
 <body>
-    <div style="background-color: #D9D9D9; width: 100%;">
+    {% comment %} <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd -  #D9D9D9;"> {% endcomment %}
+    <nav class="navbar navbar-expand-lg" style="background: rgb(36,153,199); background: radial-gradient(circle, rgba(36,153,199,1) 50%, rgba(76,0,125,1) 100%);">
+    {% comment %} <nav class="navbar navbar-expand-lg" style="background: rgb(2,0,36); background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);"> {% endcomment %}
+    {% comment %} <nav class="navbar navbar-expand-lg" style="background: rgb(127,88,175); background: linear-gradient(164deg, rgba(127,88,175,1) 35%, rgba(0,212,255,1) 100%);"> {% endcomment %}
+    {% comment %} <nav class="navbar navbar-expand-lg" style="background: rgb(127,88,175); background: linear-gradient(333deg, rgba(127,88,175,1) 26%, rgba(100,197,235,1) 49%, rgba(232,77,138,1) 79%, rgba(254,179,38,1) 100%);"> {% endcomment %}
         <div class="container">
-            <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
-                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-                    <img src="" alt="imagen" class="me-2">
-                    <span class="fs-4">PettyQuest</span>
-                </a>
-
-                <ul class="nav">
-                  
-                    <li class="nav-item"><a href="{% url 'catalogoMas'%}" class="nav-link px-2 link-dark">Ver mascotas</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link px-2 link-dark">Ayuda</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link px-2 link-dark">Acerca de</a></li>                                   
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Usuario
-                      </a>
-                      <ul class="dropdown-menu">
-                        {% if user.is_authenticated %}
-                        <li><a class="dropdown-item" href="#">Mi perfil</a></li>
-                        <li><a class="dropdown-item" href="#">Ver mensajes</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="{% url 'logout'%}">Cerrar sesion</a></li>
-                        {% else %}
-                        <li><a class="dropdown-item" href="{% url 'inicioSesion'%}">Iniciar sesion</a></li>
-                        <li><a class="dropdown-item" href="{% url 'registro'%}">Registrar usuario</a></li>
-                        {% endif %}
-                      </ul>
-                    </li>                            
+            <a class="navbar-brand" href="{% url 'index' %}">
+                <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/testing-logo-design-template-ce84480d61b3db9a8e1522a99875832f_screen.jpg?ts=1615794516" alt="Logo" height="40" class="d-inline-block align-text-top rounded-circle">
+                <span class="align-middle text-wrap">Petty Quest</span>
+            </a>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navbarColor03" style="">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-success" aria-current="page" href="{% url 'index' %}"><i class="bi bi-house-heart"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'catalogoMas' %}">Ver mascotas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Ayuda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Acerca de</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'inicioSesion' %}">Iniciar sesión</a>
+                    </li>
                 </ul>
-            </header>
+            </div>
         </div>
+    </nav>
+
+    <div class="pb-3" style="min-height: 53.3897408351vh!important;">
+        {% block content %}
+        {% endblock %}
     </div>
-
-    {% block content %}
-    {% endblock %}
-
-    <div style="background-color: #969393; width: 100%;">
-        <div class="container">
-            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-                <div class="col-md-4 d-flex align-items-center">
-                    <a href="/" class="mb-3 me-2 mb-md-0  text-decoration-none lh-1">
-                        <img src="" alt="imagen" class="me-2">
-                    </a>
-                    <span class="mb-3 mb-md-0 text-light">© 2022 PettyQuest, Inc</span>
+    <footer class="w-100" style="background: #141d2a;">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-sm">
+                    <a href="#" class="text-white nav-link">Petty Quest</a>
+                    <p class="text-secondary">
+                        <small>© 2019</small>
+                    </p>
                 </div>
-
-                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                    <li class="ms-3"><a class="text-light" href="#"><i class="bi bi-facebook fs-5"></i></a></li>
-                    <li class="ms-3"><a class="text-light" href="#"><i class="bi bi-twitter fs-5"></i></a></li>
-                    <li class="ms-3"><a class="text-light" href="#"><i class="bi bi-instagram fs-5"></i></a></li>
-                </ul>
-            </footer>
+                <div class="col-sm">
+                    <h3 class="text-white">Clientes</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none link-secondary">Adoptar</a></li>
+                        <li><a href="#" class="text-decoration-none link-secondary">Registro</a></li>
+                        <li><a href="#" class="text-decoration-none link-secondary">Inicio de sesión</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <h3 class="text-white">Compañia</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none link-secondary">Acerca de</a></li>
+                        <li><a href="#" class="text-decoration-none link-secondary">Vacantes</a></li>
+                        <li><a href="#" class="text-decoration-none link-secondary">Contactanos</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <h3 class="text-white">Información adicional</h3>
+                    <ul class="list-unstyled links">
+                        <li><a href="#" class="text-decoration-none link-secondary">Términos y condiciones</a></li>
+                        <li><a href="#" class="text-decoration-none link-secondary">Política de privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="text-white">Síguenos</h3>
+                    <div class="my-2 row">
+                        <div class="col-auto my-1"><a href="#"><button style="display: block; width: 50px; height: 50px; border-radius: 50%; background: rgb(36,153,199); background: radial-gradient(circle, rgba(36,153,199,1) 50%, rgba(76,0,125,1) 100%);"><i class="bi bi-facebook text-white"></i></button></a></div>
+                        <div class="col-auto my-1"><a href="#"><button style="display: block; width: 50px; height: 50px; border-radius: 50%; background: rgb(36,153,199); background: radial-gradient(circle, rgba(36,153,199,1) 0%, rgba(76,0,125,1) 100%);"><i class="bi bi-twitter text-white"></i></button></a></div>
+                        <div class="col-auto my-1"><a href="#"><button style="display: block; width: 50px; height: 50px; border-radius: 50%; background: #e84d8a;"><i class="bi bi-linkedin text-white"></i></button></a></div>
+                        <div class="col-auto my-1"><a href="#"><button style="display: block; width: 50px; height: 50px; border-radius: 50%; background: #e84d8a;"><i class="bi bi-instagram text-white"></i></button></a></div>
+                        <div class="col-auto my-1"><a href="#"><button style="display: block; width: 50px; height: 50px; border-radius: 50%; background: #e84d8a;"><i class="bi bi-telegram text-white"></i></button></a></div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-        crossorigin="anonymous"></script>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
         {% block scripts %}
         {% endblock scripts %}
 </body>
