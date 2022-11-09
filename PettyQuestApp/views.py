@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from .forms import CrearUsuario, InicioSesion, RegistroForm, buscadorContactoMensajeria, enviarMensaje
-from .models import Mascota
+from .forms import *
+from .models import *
 from django.contrib.auth.models import User 
 from django.views.generic import CreateView
 from django.contrib.auth import login, logout, authenticate
@@ -98,4 +98,33 @@ def consultarSolicitudes(request):
     title = 'Consultar_Solicitudes'
     return render(request , 'consultarSolicitudes/consultarSolicitudes.html',{
             'title' : title,
+    })
+
+def misMascotas(request):
+    title = 'misMascotas'
+    return render(request , 'usuario/misMascotas.html',{
+        'title' : title,
     }) 
+
+def perfilUsuario(request):
+    title = 'perfilUsuario'
+    return render(request , 'usuario/perfilUsuario.html',{
+        'title' : title,
+        'formperfilUsuario':PerfilUsuarioForm
+    }) 
+
+def perfilMascota(request):
+    title = 'perfilMascota'
+    return render(request , 'mascotas/perfilMascota.html',{
+        'title' : title,
+    }) 
+
+def solicitudMascota(request):
+        if request.method == 'GET':
+                 return render(request , 'mascotas/solicitudMascota.html',{
+                'title' : "Solicitud mascota"
+    })
+        else :
+                print("Entro al POST")
+                Mascota.objects.create(direccion=request.POST['direccion'], razon=request.POST['razon'], personas=request.POST['personas'], recursos=request.POST['recursos'], comprobanteDomicilio=request.POST['comprobanteDomicilio'], ine=request.POST['ine'])
+      
